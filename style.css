@@ -1,42 +1,130 @@
-*{
+*, *::before, *::after {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: black;
+    padding: 0 232px;
+    height: 100vh;
+    overflow: hidden;
 }
+
 .container {
     display: flex;
     height: 100vh;
-    margin: 0 232px;
+    margin: 0;
 }
 
 .left {
     background-image: url('images/background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    width: 60%;
+    width: 40%;
+}
+
+.logo-bar {
+    margin-top: 6.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(102, 102, 136, 0.5);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: auto;
+    width: 5rem;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: antiquewhite;
 }
 
 .right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    width: 60%;
+    height: 100vh;
+    min-height: 0;
 }
 
 .top {
-    background-color: bisque;
+    background-color: whitesmoke;
+    padding: 3rem 4rem 1rem 4rem;
     flex-grow: 1;
 }
 
 .middle {
-    background-color: silver;
+    background-color: rgb(222, 230, 230);
+    padding: 1rem 4rem;
     flex-grow: 1;
 }
 
+.middle-text {
+    font-size: 1.3rem;
+    padding: 1rem 0;
+}
+
 .bottom {
-    background-color: bisque;
+    background-color: whitesmoke;
+    padding: 1rem 4rem 4rem 4rem;
     flex-grow: 1;
+}
+
+.form-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-top: 1rem;
+    padding-left: 0.3rem;
+}
+
+.form-group input {
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 0.6rem;
+}
+
+button {
+    padding: 0.5rem;
+    background-color: darkkhaki;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.login {
+    font-size: 0.9rem;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(21, 80, 40);
+}
+
+input:user-invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
 }

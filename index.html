@@ -9,41 +9,56 @@
 <body>
     <div class="container">
         <div class="left">
-            <div class="sidebar">
+            <div class="logo-bar">
                 <div class="logo">
-                    iojasdjasdj
+                    <img src="images/odin-lined.png">
+                    <div class="logo-text">
+                        PROJECT
+                    </div>
                 </div>
             </div>
         </div>
         <div class="right">
             <div class="top">
                 <div class="top-text">
-                    This is the text for the top part.
+                    This is the text for the top part. Contrary to popular belief, 
+                    Lorem Ipsum is not simply random text. It has roots in a piece 
+                    of classical Latin literature from 45 BC, making it over 2000 
+                    years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+                    College in Virginia, looked up one of the more obscure Latin words, 
+                    consectetur, from a Lorem Ipsum passage.
                 </div>
                 <div class="top-subtext">
                     This is another text part in the top.
                 </div>
             </div>
             <div class="middle">
-                <form action="#" method="post">
-                    <label for="first_name">First Name</label>
-                    <input type="text" id="first_name" name="first_name">
-                    <label for="last_name">Last Name</label>
-                    <input type="text" id="last_name" name="last_name">
-                    <label for="user_email">Email</label>
-                    <input type="email" id="user_email" name="email">
-                    <label for="phone_no">Phone No.</label>
-                    <input type="number" id="phone_no" name="phone_no">
-                    <label for="user_password">Password</label>
-                    <input type="password" id="user_password" name="password">
-                    <label for="confirm_password">Password</label>
-                    <input type="password" id="confirm_password" name="confirm_password">
+                <div class="middle-text">
+                    Sign Up to my website.
+                </div>
+                <form id= "signup-form" action="#" method="post" class="form-container">
+                    <div class="form-group">
+                        <label for="first_name">First Name</label>
+                        <input type="text" id="first_name" name="first_name" required minlength="3">
+                        <label for="user_email">Email</label>
+                        <input type="email" id="user_email" name="email" required>
+                        <label for="user_password">Password</label>
+                        <input type="password" id="user_password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last_name">Last Name</label>
+                        <input type="text" id="last_name" name="last_name" required minlength="3">
+                        <label for="phone_no">Phone No.</label>
+                        <input type="tel" id="phone_no" name="phone_no">
+                        <label for="confirm_password">Password</label>
+                        <input type="password" id="confirm_password" name="confirm_password" required>
+                    </div>
                 </form>
             </div>
             <div class="bottom">
-                <button type="submit">Create an Account</button>
-                <div class="forgot-password">
-                    <a href="#">Forgot Password</a>
+                <button type="submit" form="signup-form">Create an Account</button>
+                <div class="login">
+                    Already have an account? <a href="#">Log In</a>
                 </div>
             </div>
         </div>
